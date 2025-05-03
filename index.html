@@ -1,0 +1,35 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+ 
+  const button = document.createElement('button');
+  button.textContent = 'Click me!';
+  button.style.padding = '10px 20px';
+  button.style.marginTop = '20px';
+  button.style.fontSize = '16px';
+
+ 
+  const message = document.createElement('p');
+  message.id = 'output';
+  message.style.marginTop = '15px';
+
+  
+  button.addEventListener('click', () => {
+    message.textContent = 'ধন্যবাদ! আপনি বাটনে ক্লিক করেছেন।';
+  });
+
+  // 
+  const mainContent = document.querySelector('.app-content');
+  mainContent.appendChild(button);
+  mainContent.appendChild(message);
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.createElement('button');
+  toggleButton.textContent = 'Dark Mode';
+  toggleButton.className = 'dark mood';
+
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+
+  document.querySelector('.app-content').appendChild(toggleButton);
+});
